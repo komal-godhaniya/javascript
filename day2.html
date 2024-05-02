@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oprator</title>
+</head>
+<body>
+    <h2>==> Add two numbers</h2>
+    <h3>Enter First Value :</h3>
+    <input type="text" id="in_1">
+
+    <h3>Enter Second Value :</h3>
+    <input type="text" id="in_2">
+    
+    <h2 id="ans_1"></h2>
+
+    <h2>==> Multiply  two numbers</h2>
+    <h3>Enter First Value :</h3>
+    <input type="text" id="in_3">
+
+    <h3>Enter Second Value :</h3>
+    <input type="text" id="in_4">
+    
+    <h2 id="ans_2"></h2>
+</body>
+</html>
+
+<script>
+
+    // task-1
+
+    let a = document.getElementById("in_1").value
+    let b = document.getElementById("in_2").value
+    let c = +a + +b
+
+    document.getElementById("ans_1").innerHTML = c
+
+    // task-2
+
+    let d = document.getElementById("in_3").value
+    let e = document.getElementById("in_4").value
+    let f = +d * +e
+
+    document.getElementById("ans_2").innerHTML = f
+
+    // task-3
+
+    var val1 = 20
+    var val2 = 20
+    console.log(val1==val2)
+
+    // task-4
+
+    var val3 = 20
+    var val4 = 30
+    console.log(val3 > val4)
+
+    // task-5
+
+    var log1 = 15
+    var log2 = 5
+    var log3 = 15
+    var log4 = 7
+    console.log(log1 > log2 && log3 > log4) 
+
+    // task-6
+
+    var log5 = 15
+    var log6 = 5
+    var log7 = 15
+    var log8 = 7
+    console.log(log5 > log6 || log7 < log8)
+
+    // task-7
+
+    let ass_1 = 10
+    ass_1++
+    console.log(ass_1)
+
+    // task-8
+
+    let ass_2 = 0
+    ass_2 += 90
+    console.log(ass_2)
+
+    // task-9
+
+    let ass_3 = 40
+    ass_3 -= 5
+    console.log(ass_3)
+
+</script>
