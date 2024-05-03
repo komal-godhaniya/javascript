@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oprator-5</title>
+</head>
+<body>
+    <center>
+        <h1>-----------------Calculate GST-----------------</h1>
+
+        <h3>Enter Price = </h3>
+        <input type="text" id="in-1">
+
+        <h3>Enter Rate = </h3>
+        <input type="text" id="in-2">
+
+        <h2 id="ans"></h2>
+    </center>
+</body>
+</html>
+<script>
+    let price = document.getElementById("in-1").value
+    let rate = document.getElementById("in-2").value
+
+    answer = +price + (+price * (+rate / 100))
+
+    document.getElementById("ans").innerText=answer
+
+</script>

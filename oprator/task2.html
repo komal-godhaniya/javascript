@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oprator-2</title>
+</head>
+<body>
+    <center>
+        <h1>-----------------SIMPLE INTREST-----------------</h1>
+
+        <h3>Enter Principle Amount Of Intrest :</h3><input type="text" id="in-1">
+        
+        <h3>Enter Rate Of Intrest :</h3><input type="text" id="in-2">
+
+        <h3>Enter Time Duration :</h3><input type="text" id="in-3">
+        
+        <h2 id="ans"></h2>
+    </center>
+</body>
+</html>
+<script>
+    var prince = document.getElementById("in-1").value
+    var Rate = document.getElementById("in-2").value
+    var Time = document.getElementById("in-3").value
+
+    answer = prince*Rate*Time
+
+    document.getElementById("ans").innerText=answer
+
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oprator-4</title>
+</head>
+<body>
+    <center>
+        <h2>-----------------Average Of Student Marks-----------------</h2>
+
+        <h3>Marks of DS : </h3>
+        <input type="text" id="in-1">
+
+        <h3>Marks of Web Programming : </h3>
+        <input type="text" id="in-2">
+
+        <h3>Marks of Coa : </h3>
+        <input type="text" id="in-3">
+
+        <h2 id="ans"></h2>
+    </center>    
+</body>
+</html>
+<script>
+    let ds = document.getElementById("in-1").value
+    let web = document.getElementById("in-2").value
+    let coa = document.getElementById("in-3").value
+
+    let total = (+ds + +web + +coa)/3
+
+    document.getElementById("ans").innerText=total
+
+</script>
