@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-3</title>
+</head>
+<style>
+    body{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #ans{
+        color: rgb(117, 36, 7);
+    }
+    input{
+        padding: 3px;
+        border: 1px solid rebeccapurple;
+    }
+    h3{
+        color: rgb(8, 90, 8);
+    }
+</style>
+<body>
+    <center style="border: 2px dotted blue;">
+        <h1 style="color: rgb(123, 46, 46);">------------------Speed and Time Calculation------------------</h1>
+
+        <h3>Enter the distance travelled in meters :-</h3>
+        <input type="text" id="in1">
+
+        <h3>Enter the time taken in seconds :-</h3>
+        <input type="text" id="in2">
+
+        <h1 id="ans"></h1>
+    </center>
+</body>
+</html>
+<script>
+
+    let meter = document.getElementById("in1").value
+    let second = document.getElementById("in2").value
+    let speed = +meter / second
+
+    document.getElementById("ans").innerText = "Answer = "+speed 
+
+</script>

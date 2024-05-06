@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-1</title>
+</head>
+<style>
+    body{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #ans{
+        color: rgb(117, 36, 7);
+    }
+    input{
+        padding: 3px;
+        border: 1px solid rebeccapurple;
+    }
+    h3{
+        color: rgb(8, 90, 8);
+    }
+</style>
+<body>
+    <center style="border: 2px dotted blue;">
+        <h1 style="color: rgb(123, 46, 46);">------------------Product cost Calculation------------------</h1>
+
+        <h3>Enter price of product :-</h3>
+        <input type="text" id="in1">
+
+        <h3>Enter quantity of product :-</h3>
+        <input type="text" id="in2">
+
+        <h1 id="ans"></h1>
+    </center>
+</body>
+</html>
+<script>
+
+    // task-1
+
+    var price = document.getElementById("in1").value
+    var quantity = document.getElementById("in2").value
+
+    var total = +price * +quantity
+
+    document.getElementById("ans").innerText = total
+</script>
