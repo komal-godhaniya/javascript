@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condition</title>
+</head>
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h1{
+        color: rgb(0, 0, 107);
+    }
+    h3{
+        color: cadetblue;
+    }
+    h2{
+        color: cornflowerblue;
+    }
+</style>
+<body>
+    <center>
+
+        <!-- task-1 -->
+        <h1>----------Temperature Check----------</h1>
+        <h3>Enter Temperature in calsius :</h3>
+        <input type="text" id="in1">
+
+        <h2 id="ans1"></h2>
+
+        <hr style="border: 1px dashed;">
+
+        <!-- task-2 -->
+
+        <h1>----------Grading System----------</h1>
+        <h3>Enter Your Score :</h3>
+        <input type="text" id="in2">
+
+        <h2 id="ans2"></h2>
+
+        <hr style="border: 1px dashed;">
+
+        <!-- task-3 -->
+
+        <h1>----------Number Comparison----------</h1>
+        <h3>Enter First Number :</h3>
+        <input type="text" id="in3">
+        <h3>Enter Second Number :</h3>
+        <input type="text" id="in4">
+
+        <h2 id="ans3"></h2>
+
+        <hr style="border: 1px dashed;">
+
+        <!-- task-4 -->
+
+        <h1>----------Positive, Negative, or Zero----------</h1>
+        <h3>Enter Number :</h3>
+        <input type="text" id="in5">
+
+        <h2 id="ans4"></h2>
+
+        <hr style="border: 1px dashed;">
+
+    </center>
+</body>
+</html>
+<script>
+
+    // task-1
+
+    let temp = document.getElementById("in1").value
+
+    if(temp === ""){
+        document.getElementById("ans1").innerText = "Enter Any Temperature"
+    }
+    else{
+        if (temp<=0) {
+            document.getElementById("ans1").innerText="It's freezing cold!"
+        }
+        else if (temp>0 && temp<=10) {
+            document.getElementById("ans1").innerText="It's chilly"
+        }
+        else if (temp>=11 && temp <=20) {
+            document.getElementById("ans1").innerText="It's cool"
+        }
+        else{
+            document.getElementById("ans1").innerText="It's warm!"
+        }
+    }
+
+    // task-2
+
+    let score = document.getElementById("in2").value
+
+    if(score === ""){
+        document.getElementById("ans2").innerText = "Enter Score"
+    }
+    else{
+        if (score>=90 && score<=100) {
+            document.getElementById("ans2").innerText="A"
+        }
+        else if (score>80 && score<=89) {
+            document.getElementById("ans2").innerText="B"
+        }
+        else if (score>=70 && score <=79) {
+            document.getElementById("ans2").innerText="C"
+        }
+        else if (score>=60 && score <=69) {
+            document.getElementById("ans2").innerText="D"
+        }
+        else{
+            document.getElementById("ans2").innerText="FAIL"
+        }
+    }
+
+    // task-3
+
+    let first = document.getElementById("in3").value
+    let second = document.getElementById("in4").value
+
+
+    if(first === "" && second === ""){
+        document.getElementById("ans3").innerText = "Enter Number"
+    }
+    else{
+        if (first > second) {
+            document.getElementById("ans3").innerText="First Number Is Greater Than...."+second
+        }
+        else if (first < second) {
+            document.getElementById("ans3").innerText="Second Number Is Greater Than...."+first
+        }
+        else{
+            document.getElementById("ans3").innerText="Both Are Equal...."
+        }
+    }
+
+    // task-4
+
+    let num = document.getElementById("in5").value
+
+    if(num === ""){
+        document.getElementById("ans4").innerText = "Enter Number"
+    }
+    else{
+        if (num<0) {
+            document.getElementById("ans4").innerText="Positive Number Is..." +num
+        }
+        else if (num>0) {
+            document.getElementById("ans4").innerText="Negative Number Is..." +num
+        }
+        else{
+            document.getElementById("ans4").innerText="zero Number Is..." +num
+        }
+    }
+
+
+
+
+</script>
