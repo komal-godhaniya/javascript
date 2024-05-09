@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positive,negative,zero</title>
+</head>
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    <center>
+         <!-- task-4 -->
+
+         <h1>----------Positive, Negative, or Zero----------</h1>
+         <h3>Enter Number :</h3>
+         <input type="text" id="in5">
+ 
+         <h2 id="ans4"></h2>
+ 
+         <hr style="border: 1px dashed;">
+    </center>
+</body>
+</html>
+<script>
+
+     // task-4
+
+        let num = document.getElementById("in5").value
+
+    if(num === ""){
+        document.getElementById("ans4").innerText = "Enter Number"
+    }
+    else{
+        if (num<0) {
+            document.getElementById("ans4").innerText="Positive Number Is..." +num
+        }
+        else if (num>0) {
+            document.getElementById("ans4").innerText="Negative Number Is..." +num
+        }
+        else{
+            document.getElementById("ans4").innerText="zero Number Is..." +num
+        }
+    }
+
+</script>

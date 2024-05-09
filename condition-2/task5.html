@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grading</title>
+</head>
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    <center>
+        <!-- task-5 -->
+
+        <h1>----------Grading System----------</h1>
+        <h3>Enter Your Score :</h3>
+        <input type="text" id="in10">
+
+        <h2 id="ans5"></h2>
+
+        <hr style="border: 1px dashed;">
+    </center>
+</body>
+</html>
+<script>
+
+     // task-5
+
+     let score = document.getElementById("in10").value
+
+    if(score === ""){
+        document.getElementById("ans5").innerText = "Enter Score"
+    }
+    else{
+        if (score>=90 && score<=100) {
+            document.getElementById("ans5").innerText="A"
+        }
+        else if (score>80 && score<=89) {
+            document.getElementById("ans5").innerText="B"
+        }
+        else if (score>=70 && score <=79) {
+            document.getElementById("ans5").innerText="C"
+        }
+        else if (score>=60 && score <=69) {
+            document.getElementById("ans5").innerText="D"
+        }
+        else{
+            document.getElementById("ans5").innerText="FAIL"
+        }
+    }
+
+</script>

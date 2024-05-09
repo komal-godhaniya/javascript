@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swap</title>
+</head>
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    <center>
+        <h1>-----------------Swap Number-----------------</h1>
+
+        <h3>Enter First Value :</h3>
+        <input type="text" id="in-1">
+
+        <h3>Enter Second Value :</h3>
+        <input type="text" id="in-2">
+
+        <h3>Enter Third Value :</h3>
+        <input type="text" id="in-3">
+        <br><br>
+        <div id="ans-1"></div>
+        <br>
+        <div id="ans-2"></div>
+        <br>
+        <div id="ans-3"></div>
+    </center>
+    <hr style="border: 1px dashed;">
+
+</body>
+</html>
+<script>
+    let first = document.getElementById("in-1").value
+    let second = document.getElementById("in-2").value
+    let third = document.getElementById("in-3").value
+
+    document.getElementById("ans-1").innerText = "First Number :" +second
+    document.getElementById("ans-2").innerText = "Second Number :" +third
+    document.getElementById("ans-3").innerText = "Third Number :" +first
+
+</script>
