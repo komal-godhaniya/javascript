@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condition</title>
+</head>
+<style>
+    body{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+</style>
+<body>
+    <center>
+        <!-- task-1 -->
+        <h1>------------PASSWORD------------</h1>
+        <h3>Enter password :</h3>
+        <input type="text" id="in1" >
+
+        <h2 id="ans1"></h2>
+
+        <hr style="border: 1px dashed cadetblue;">
+
+        <!-- task-2 -->
+
+        <h1>------------TRIANGLE------------</h1>
+        <h3>Enter value of 1 angle :</h3>
+        <input type="text" id="in2" >
+
+        <h3>Enter value of 2 angle :</h3>
+        <input type="text" id="in3" >
+
+        <h3>Enter value of 3 angle :</h3>
+        <input type="text" id="in4" >
+
+        <h2 id="ans2"></h2>
+        <h2 id="ans3"></h2>
+
+        <hr style="border: 1px dashed cadetblue;">
+
+        <!-- task-3 -->
+
+        <h1>------------EVEN OR ODD------------</h1>
+        <h3>Enter Any Number :</h3>
+        <input type="text" id="in5" >
+
+        <h2 id="ans4"></h2>
+
+        <hr style="border: 1px dashed cadetblue;">
+
+        <!-- task-4 -->
+
+        <h1>------------USE LADDER IF-ELSE------------</h1>
+        <h3>Enter your age :</h3>
+        <input type="text" id="in6" >
+
+        <h2 id="ans5"></h2>
+
+    </center>
+</body>
+</html>
+
+<script>
+
+    // task-1
+
+    let storepass = "komal2035"
+    let enterpass = document.getElementById("in1").value
+
+    if (enterpass === "") {
+        document.getElementById("ans1").innerText="Enter Valid Password..."    
+    }
+    else{   
+        if (enterpass === storepass) {
+            document.getElementById("ans1").innerText="Logged In Successfully..."
+        }
+        else{
+            document.getElementById("ans1").innerText="Incorrect Password..."
+        }
+    }
+
+    // task-2
+
+    let a = document.getElementById("in2").value
+    let b = document.getElementById("in3").value
+    let c = document.getElementById("in4").value
+
+    let sum = +a + +b + +c
+
+    if(a === "" && b === "" && c === "") {
+        document.getElementById("ans2").innerText = "Enter valid angle"   
+    }
+    else{
+        if (sum === 180) {
+            document.getElementById("ans2").innerText= "Triangle"
+
+            if (a === b && b === c && c === a) {
+            document.getElementById("ans3").innerText= "Equilateral Triangle"
+            }
+            else if(a === b || b === c || c === a){
+                document.getElementById("ans3").innerText= "Isosceles Triangle"
+            }
+            else{
+                document.getElementById("ans3").innerText= "Scalene Triangle"
+            }
+        }
+        else{
+            document.getElementById("ans2").innerText= "Not a Triangle"
+        }
+    }
+
+    // task-3
+
+    let num = document.getElementById("in5").value
+
+    if (num === "") {
+        document.getElementById("ans4").innerText="Invalid number"
+    }
+    else{
+    if (num%2==0) {
+        document.getElementById("ans4").innerText="Even Number..."
+    }
+    else{
+        document.getElementById("ans4").innerText="Odd Number..."
+    }
+    }
+
+    // task-4
+
+    let age = document.getElementById("in6").value
+
+    if (age === "") {
+        document.getElementById("ans5").innerText="Enter Your Age..."
+    }
+    else{
+        if (age>0 && age<=10) {
+            document.getElementById("ans5").innerText="Hey! you are child..."
+        }
+        else if (age>10 && age<=20) {
+            document.getElementById("ans5").innerText="Hey! Now you are Teenager..."
+        }
+        else{
+            document.getElementById("ans5").innerText="Hey! you are adult..."
+        }
+    }
+
+</script>
