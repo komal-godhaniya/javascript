@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condition</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</head>
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .form-select{
+        width: 30%;
+        background-color: transparent;
+        padding: 7px;
+        border: 1px solid;
+        border-radius: 20px;
+        padding-left: 10px;
+    }
+</style>
+<body>
+    <center>
+
+        <!-- task-1 -->
+
+        <h1>- - - - - - - - - Grade System - - - - - - - - - </h1>
+        <h3>Enter Your Score :- </h3> <input type="text" id="in1">
+
+        <h2 id="ans1"></h2>
+
+        <hr style="border: 1px dashed black;">
+
+        <!-- task-2 -->
+
+        <h1>------------Restaurant Bill------------</h1>
+
+        <select id="form" class="form-select" aria-label="Default select example">
+            <option id="opt1" selected>Open this select menu</option>
+            <option id="m1" value="1">pizza</option>
+            <option id="m2" value="2">cold-drinks</option>
+            <option id="m3" value="3">burger</option>
+        </select>
+
+        <h3 id="ans2"></h3>
+
+        <hr style="border: 1px dashed black;">
+
+        <!-- task-3 -->
+
+        <h1>------------Simple Intrest------------</h1>
+
+        <h3>Enter Principle Amount Of Intrest :</h3><input type="text" id="in3">
+        
+        <h3>Enter Rate Of Intrest :</h3><input type="text" id="in4">
+
+        <h3>Enter Time Duration :</h3><input type="text" id="in5">
+        
+        <h2 id="ans3"></h2>
+
+        <hr style="border: 1px dashed black;">
+
+        <!-- task-4 -->
+
+        <h1>------------Password------------</h1>
+
+        <h3>Enter password :</h3>
+        <input type="text" id="in6" >
+
+        <h2 id="ans4"></h2>
+    </center>
+</body>
+</html>
+
+<script>
+
+    // task-1
+
+    let score = document.getElementById("in1").value
+
+    if (score === "") {
+        document.getElementById("ans1").innerText="Enter Valid Score"    
+    }
+    else{
+        if (score >=90 && score <=100) {
+            document.getElementById("ans1").innerText=" Grade 'A'"
+        }
+        else if (score>=80 && score<=89) {
+            document.getElementById("ans1").innerText=" Grade 'B'"
+        }
+        else if (score>=70 && score<=79) {
+            document.getElementById("ans1").innerText=" Grade 'C'"
+        }
+        else if (score>=60 && score<=69) {
+            document.getElementById("ans1").innerText=" Grade 'D'"
+        }
+        else{
+            document.getElementById("ans1").innerText=" Grade 'FAIL'"
+        }
+    }
+
+    // task-2
+
+    let form = document.getElementById("form").value
+    let m1 = document.getElementById("m1").value
+    let m2 = document.getElementById("m2").value
+    let m3 = document.getElementById("m3").value
+
+    price1 = 200
+    price2 = 100
+    price3 = 300
+    if (form === "") {
+        document.getElementById("ans2").innerText="Select Menu"    
+    }
+    else{
+        if (form == m1) {
+            document.getElementById("ans2").innerText="Your Bill Is..."+(price1+((5/100)*price1)) +" ₹"
+        }
+        else if (form == m2) {
+            document.getElementById("ans2").innerText="Your Bill Is..."+(price2+((5/100)*price2)) +" ₹"
+        }
+        else{
+            document.getElementById("ans2").innerText="Your Bill Is..."+(price3+((5/100)*price3)) +" ₹"
+        }
+    }
+
+
+    // task-3
+
+    var prince = document.getElementById("in3").value
+    var Rate = document.getElementById("in4").value
+    var Time = document.getElementById("in5").value
+
+    answer = prince*Rate*Time
+
+    document.getElementById("ans3").innerText=answer
+
+    // task-4
+
+    let storepass = "komal2035"
+    let enterpass = document.getElementById("in6").value
+
+    if (enterpass === "") {
+        document.getElementById("ans4").innerText="Enter Valid Password..."    
+    }
+    else{   
+        if (enterpass === storepass) {
+            document.getElementById("ans4").innerText="Logged In Successfully..."
+        }
+        else{
+            document.getElementById("ans4").innerText="Incorrect Password..."
+        }
+    }
+</script>
