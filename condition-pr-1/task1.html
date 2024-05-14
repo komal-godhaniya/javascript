@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condition-pr</title>
+</head>
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    <center>
+
+        <!-- task-1 -->
+
+        <h1>-----------TICKET PRICE-----------</h1>
+
+        <h3>Enter Your Age :- </h3> <input type="text" id="in1">
+
+        <h2 id="ans1"></h2>
+
+        <hr style="border: 1px dashed black;">
+
+        <!-- task-2 -->
+
+        <h1>-----------AMOUNT PRICE-----------</h1>
+
+        <h3>Enter Your product price :- </h3> <input type="text" id="in2">
+
+        <h2 id="ans2"></h2>
+
+        <hr style="border: 1px dashed black;">
+
+        <!-- task-3 -->
+
+        <h1>-----------GUESSING GAME-----------</h1>
+
+        <h3>Enter any number :- </h3> <input type="text" id="in3">
+
+        <h2 id="ans3"></h2>
+
+        <hr style="border: 1px dashed black;">
+
+        <!-- task-4 -->
+
+        <h1>-----------COVERT DOLLER INTO -----------</h1>
+
+        <h3>Enter  your $ :- </h3> <input type="text" id="in4">
+
+        <h2 id="ans4"></h2>
+
+    </center>
+</body>
+</html>
+<script>
+
+    // task-1
+
+    let age = document.getElementById("in1").value
+
+    if (age === "") {
+        document.getElementById("ans1").innerText = "INVALID NUMBER"
+    }
+    else{
+        if (age >=1 && age <=12) {
+            document.getElementById("ans1").innerText = "Your Ticket Price is 5 ₹"
+        }
+        else if (age >12 && age <=18) {
+            document.getElementById("ans1").innerText = "Your Ticket Price is 10 ₹"
+        }
+        else if (age >18 && age<=60) {
+            document.getElementById("ans1").innerText = "Your Ticket Price is 20 ₹"
+        }
+        else {
+            document.getElementById("ans1").innerText = "Your Ticket Price is 15 ₹"
+        }
+    }
+
+    // task-2
+
+    let price = document.getElementById("in2").value
+
+    if (price === "") {
+        document.getElementById("ans2").innerText="INVALID NUMBER"
+    }
+    else{
+        if (price >=100) {
+            document.getElementById("ans2").innerText= +(price -((price * 20)/100)) +" ₹"
+        }
+        else if (price >= 50 && price <= 100) {
+            document.getElementById("ans2").innerText= +(price -((price * 10)/100)) +" ₹"
+        }
+        else{
+            document.getElementById("ans2").innerText= +price +" ₹"
+        }
+    }
+
+    // task-3
+
+    let number = document.getElementById("in3").value
+
+    let secret = "20"
+    
+    if (number === "") {
+        document.getElementById("ans3").innerText = "INVALID NUMBER"
+    }
+    else{
+        if (number > secret) {
+            document.getElementById("ans3").innerText = "U ARE " +(number-secret)  +" NUMBER HIGHER THAN SECRET NUMBER"
+        }
+        else if (number < secret){
+            document.getElementById("ans3").innerText = "U ARE " +(secret-number)  +" NUMBER LOWER THAN SECRET NUMBER"
+        }
+        else{
+            document.getElementById("ans3").innerText = "U WIN !! THIS IS SECRET NUMBER"
+        }
+    }
+
+    // task-4
+
+    let doller = document.getElementById("in4").value
+
+    let rupees = 83.51
+
+    if (doller === "") {
+        document.getElementById("ans4").innerText = "INVALID NUMBER"
+    }
+    else{
+        document.getElementById("ans4").innerText = +doller + " $ in ₹ " +(doller*rupees)
+    }
+
+
+</script>
