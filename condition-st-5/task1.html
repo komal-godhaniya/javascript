@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditional-1</title>
+</head>
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    center{
+        border: 1px dashed blueviolet;
+    }
+</style>
+<body>
+    <center>
+        <h1>-------------DAY OF THE WEEK-------------</h1>
+
+        <h3>Enter Any Day :- </h3> <input type="text" id="in1">
+        <h2 id="ans1"></h2>
+    </center>
+</body>
+</html>
+<script>
+
+    let day = document.getElementById("in1").value
+
+    if (day === "") {
+        document.getElementById("in1").innerText="Invalid Value"
+    }
+    else{
+        switch (day) {
+            case "sunday":
+            case "Sunday":
+            case "SUNDAY":
+                document.getElementById("ans1").innerText=" IT'S A WEEKEND!"
+                break
+            case "monday":
+            case "Monday":
+            case "MONDAY":
+                document.getElementById("ans1").innerText=" IT'S A START OF THE WORKWEEK 💻!"
+                break
+            case "tuesday":
+            case "Tuesday":
+            case "TUESDAY":
+                document.getElementById("ans1").innerText="IT'S THIRD DAY OF WEEK 🈳!"
+                break
+            case "wednesday":
+            case "Wednesday":
+            case "WEDNESDAY":
+                document.getElementById("ans1").innerText=" IT'S MIDDLE DAY OF WEEK ♒!"
+                break
+            case "thursday":
+            case "Thursday":
+            case "THURSDAY":
+                document.getElementById("ans1").innerText=" IT'S A FIFTH DAY OF WEEK 🔯!"
+                break    
+            case "friday":
+            case "Friday":
+            case "FRIDAY":
+                document.getElementById("ans1").innerText=" IT'S ALMOST WEEKEND ♐!"
+                break 
+            case "saturday":
+            case "Saturday":
+            case "SATURDAY":
+                document.getElementById("ans1").innerText=" IT'S A HALF HOLLYDAY ♋!"
+                break
+            default: document.getElementById("ans1").innerText="IT'S SOMEOTHER DAY"
+        }
+    }
+</script>

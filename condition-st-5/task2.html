@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditional-2</title>
+</head>
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    center{
+        border: 1px dashed blueviolet;
+    }
+</style>
+<body>
+    <center>
+        <h1>-------------CALCULATOR-------------</h1>
+
+        <h3>Enter Operator for perform task :- </h3> <input type="text" id="in1">
+        <h3>Enter First Value :- </h3> <input type="text" id="in2">
+        <h3>Enter Second Value :- </h3> <input type="text" id="in3">
+        <h2 id="ans1"></h2>
+       
+    </center>
+</body>
+</html>
+<script>
+    let operator = document.getElementById("in1").value
+    let first = document.getElementById("in2").value
+    let second = document.getElementById("in3").value
+
+    if (operator === "" && first === "" && second === "") {
+        document.getElementById("ans1").innerText="Invalid Number"
+    }
+    else{
+        switch (operator) {
+            case "addition":
+            case "+":
+                document.getElementById("ans1").innerText= "ADDITION : " + (+first + +second)
+                break
+            case "subtract":
+            case "-":
+                document.getElementById("ans1").innerText= "SUBTRACT : " + (+first - +second)
+                break        
+            case "multiplication":
+            case "*":
+                document.getElementById("ans1").innerText= "MULTIPLICATION : " + (+first * +second)
+                break        
+            case "division":
+            case "/":
+                document.getElementById("ans1").innerText= "DIVISION : " + (+first / +second)
+                break
+               
+            default : document.getElementById("ans1").innerText = "ENTER ANY OPERATOR +,-,*,/ & VALUE"     
+            }
+    }
+
+</script>

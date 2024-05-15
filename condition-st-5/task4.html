@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditional-4</title>
+</head>
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    center{
+        border: 1px dashed blueviolet;
+    }
+    #lang{
+       padding-left: 10px;
+       padding-right: 10px;
+       padding-bottom: 5px;
+       padding-top: 5px;
+       background-color: transparent;
+       border: 1px solid black;
+    }
+</style>
+<body>
+    <center>
+
+        <h1>-------------TRANSLATE DIFFERENT LANGUAGE-------------</h1>
+
+        <select name="" id="lang">
+            <option value="ENGLISH">ENGLISH</option>
+            <option value="SPANICH">SPANICH</option>
+            <option value="FRENCH">FRENCH</option>
+        </select>
+       <h2 id="ans"></h2>
+    </center>
+
+</body>
+</html>
+<script>
+
+    let language = document.getElementById("lang").value
+
+    if (language === "") {
+        document.getElementById("ans").innerText = ""
+    }
+    else{
+        switch(language)
+        {
+            case "ENGLISH" : document.getElementById("ans").innerText = "Hello!"
+            break
+            case "SPANICH" : document.getElementById("ans").innerText = "¡Hola!"
+            break
+            case "FRENCH" : document.getElementById("ans").innerText = "Bonjour!"
+            break
+        }
+    }
+</script>

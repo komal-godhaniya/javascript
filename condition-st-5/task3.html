@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditional-3</title>
+</head>
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    center{
+        border: 1px dashed blueviolet;
+    }
+</style>
+<body>
+    <center>
+
+        <h1>-------------Traffic Light-------------</h1>
+
+        <h3>Enter Any Traffic Light Color 🚦  :- </h3> <input type="text" id="in1">
+        <h2 id="ans1"></h2>
+       
+    </center>
+</body>
+</html>
+<script>
+    let color = document.getElementById("in1").value
+
+    if(color === ""){
+        document.getElementById("ans1").innerText="INVALID VALUE"
+    }
+    else{
+        switch (color) {
+        case "red":
+            document.getElementById("ans1").innerText="STOP !"
+            break
+        case "green":
+            document.getElementById("ans1").innerText="SLOW DOWN !"
+            break
+        case "yellow":
+            document.getElementById("ans1").innerText="GO."
+            break           
+        default: document.getElementById("ans1").innerText="ENTER TRAFFIC COLOR"
+    }
+    }
+</script>

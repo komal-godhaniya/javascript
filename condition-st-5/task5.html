@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditional-4</title>
+</head>
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    center{
+        border: 1px dashed blueviolet;
+    }
+    #coffee{
+       padding-left: 10px;
+       padding-right: 10px;
+       padding-bottom: 5px;
+       padding-top: 5px;
+       background-color: transparent;
+       border: 1px solid black;
+    }
+</style>
+<body>
+    <center>
+
+        <h1>-------------STARBUCKS COFFEE MENU-------------</h1>
+
+        <select name="" id="coffee">
+            <option value="Cappuccino">Cappuccino</option>
+            <option value="Caffe Americano">Caffe Americano</option>
+            <option value="Cold coffee">Cold coffee</option>
+        </select>
+       <h2 id="ans"></h2>
+    </center>
+
+</body>
+</html>
+<script>
+
+    let coffee = document.getElementById("coffee").value
+
+    if (coffee === "") {
+        document.getElementById("ans").innerText = ""
+    }
+    else{
+        switch(coffee)
+        {
+            case "Cappuccino" : document.getElementById("ans").innerText = "CAPPUCCIONN : 300 ₹"
+            break
+            case "Caffe Americano" : document.getElementById("ans").innerText = "Caffe Americano : 250 ₹"
+            break
+            case "Cold coffee" : document.getElementById("ans").innerText = "Cold coffee : 450 ₹"
+            break
+        }
+    }
+</script>
