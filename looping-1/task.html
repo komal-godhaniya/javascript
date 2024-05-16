@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>looping-1</title>
+</head>
+<style>
+    body{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+</style>
+<body>
+    <center>
+
+        <!-- task-1 -->
+
+        <h1>---------- Palindrome Name----------</h1>
+        <h3>Enter Any Name :- </h3>
+        <input type="text" id="in1">
+        <h2 id="ans1"></h2>
+
+        <hr style="border: 1px dashed black;"> 
+        
+        <!-- task-2 -->
+
+        <h1>---------- Vowels In String ----------</h1>
+        <h3>Enter Any Name :- </h3>
+        <input type="text" id="in2">
+        <h2 id="ans2"></h2>
+
+        <hr style="border: 1px dashed black;"> 
+
+        <!-- task-3 -->
+
+        <h1>---------- Even Number ----------</h1>
+        <h3>Enter Any Number :- </h3>
+        <input type="text" id="in3">
+        <h2 id="ans3"></h2>
+
+        <hr style="border: 1px dashed black;"> 
+
+        <!-- task-4 -->
+
+        <h1>---------- Odd Number ----------</h1>
+        <h3>Enter Any Number :- </h3>
+        <input type="text" id="in4">
+        <h2 id="ans4"></h2>
+
+        <hr style="border: 1px dashed black;"> 
+
+        <!-- task-5 -->
+
+        <h1>---------- Consonants In String ----------</h1>
+        <h3>Enter Any Name :- </h3>
+        <input type="text" id="in5">
+        <h2 id="ans5"></h2>
+
+        <hr style="border: 1px dashed black;"> 
+
+        <!-- task-6 -->
+
+        <h1>---------- Print Your Word Multiple Time ----------</h1>
+        <h3>Enter Any Name :- </h3> <input type="text" id="in6">
+        <h3>How Many Times U Would Print Your Word :- </h3> <input type="text" id="in7">
+        <h2 id="ans6"></h2>
+    
+    </center>
+</body>
+</html>
+<script>
+
+    // task-1
+
+    let str = document.getElementById("in1").value
+
+    let pel1 = ""
+    let pel2 = ""
+
+    for(let i=0; str[i];i++){
+        pel1 += str[i]
+    }
+    for(let i=str.length-1; i>=0;i--){
+        pel2 += str[i]
+    }
+    if(str === ""){
+        document.getElementById("ans1").innerText= "INVALID"
+    }
+    else{
+        if (pel1 === pel2) {
+            document.getElementById("ans1").innerText = "PALINDROME"
+        }
+        else{
+            document.getElementById("ans1").innerText = "NOT A PALINDROME"
+        }
+    }
+
+    // task-2
+
+    let vowel = document.getElementById("in2").value
+
+    let result = 0
+
+    if (vowel === "") {
+        document.getElementById("ans2").innerText="INVALID"
+    }
+    else{
+        for(let i=0; i<=vowel.length; i++){
+        if (vowel[i] =='a' || vowel[i] == 'A' ||
+            vowel[i] =='e' || vowel[i] == 'E' ||
+            vowel[i] =='i' || vowel[i] == 'I' ||
+            vowel[i] =='o' || vowel[i] == 'O' ||
+            vowel[i] =='u' || vowel[i] == 'U') 
+        {
+            result ++
+        }
+    }
+      document.getElementById("ans2").innerText = result + " vowels"
+    }
+
+    // task-3
+
+    let even = document.getElementById("in3").value
+
+    if (even === "") {
+        document.getElementById("ans3").innerHTML = "INVALID"
+    }
+    else{
+        for(let i=1; i<=even; i++){
+            if (i % 2 == 0) {
+                document.getElementById("ans3").innerHTML += i + "&nbsp;&nbsp;&nbsp;"
+            }
+        }
+    }
+
+    // task-4
+
+    let odd = document.getElementById("in4").value
+
+    if (odd === "") {
+        document.getElementById("ans4").innerHTML = "INVALID"
+    }
+    else{
+        for(let i=1; i<=odd; i++){
+            if (i % 2 != 0) {
+                document.getElementById("ans4").innerHTML += i + "&nbsp;&nbsp;&nbsp;"
+            }
+        }
+    }
+
+     // task-5
+
+     let Consonants  = document.getElementById("in5").value
+
+    let answer = 0
+
+    if (Consonants  === "") {
+        document.getElementById("ans5").innerText="INVALID"
+    }
+    else{
+        for(let i=0; Consonants[i]; i++){
+        if (Consonants [i] =='a' || Consonants [i] == 'A' ||
+            Consonants [i] =='e' || Consonants [i] == 'E' ||
+            Consonants [i] =='i' || Consonants [i] == 'I' ||
+            Consonants [i] =='o' || Consonants [i] == 'O' ||
+            Consonants [i] =='u' || Consonants [i] == 'U') 
+        {
+        
+        }
+        else{
+            answer ++
+        }
+    }
+    document.getElementById("ans5").innerText = answer + " Consonants "
+    }
+
+    // task-6
+
+    let word = document.getElementById("in6").value
+    let Number = document.getElementById("in7").value
+
+    if (word == "" && Number == "") {
+        document.getElementById("ans6").innerHTML = "INVALID"
+    }
+    else{
+        for(let i=1; i<=Number; i++){
+            document.getElementById("ans6").innerHTML += word+ " <br>"
+        }
+    }
+
+    
+</script>
