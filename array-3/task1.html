@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array - 3</title>
+</head>
+<style>
+    body{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    hr{
+        border: 1px dashed black;
+    }
+</style>
+<body>
+    <center>
+
+        <!-- task-1 -->
+
+        <h1>-------------Multiply each element-------------</h1>
+
+        <h3 id="ans1"></h3>
+
+        <hr>
+
+        <!-- task-2 -->
+
+        <h1>-------------Sum of all elements-------------</h1>
+
+        <h3 id="ans2"></h3>
+
+        <hr>
+
+        <!-- task-3 -->
+
+        <h1>-------------products of all num-------------</h1>
+
+        <h3 id="ans3"></h3>
+
+        <hr>
+
+        <!-- task-4 -->
+
+        <h1>-------------sum of all even num-------------</h1>
+
+        <h3 id="ans4"></h3>
+
+        <hr>
+
+        <!-- task-5 -->
+
+        <h1>-------------Find length of num [greater than 4]-------------</h1>
+
+        <h3 id="ans5"></h3>
+
+        <hr>
+
+        <!-- task-6 -->
+
+        <h1>-------------Find element present in array-------------</h1>
+
+        <h3 id="ans6"></h3>
+
+        <hr>
+
+        <!-- task-7 -->
+
+        <h1>-------------square of even number-------------</h1>
+
+        <h3 id="ans7"></h3>
+
+        <hr>
+        
+        <!-- task-8 -->
+
+        <h1>-------------string less than 5 convert uppercase-------------</h1>
+
+        <h3 id="ans8"></h3>
+
+    </center>
+</body>
+</html>
+
+<script>
+
+    // task-1
+
+    let arr_1 = [1,2,3,4,5,6,7,8,9,10]
+
+    document.getElementById("ans1").innerHTML = arr_1 +"<br><br>" + "AFTER MULTIPLY BY 3 :-  <br><br>"
+
+    arr_1.forEach((el)=>{
+        let multiply =el * 3 + "&nbsp;"
+        console.log(multiply)
+        document.getElementById("ans1").innerHTML += multiply 
+    })
+
+    // task-2
+
+    let arr_2 = [1,2,3,4,5]
+
+    document.getElementById("ans2").innerHTML = arr_2 +"<br><br>" + "SUM OF ALL ELEMENTS :- "
+
+    let sum = arr_2.reduce((acc,cur)=>{
+        return acc + cur 
+    },0)
+    console.log(sum)
+    document.getElementById("ans2").innerHTML += sum
+
+    // task-3
+
+    let arr_3 = [1,2,3,4,5]
+
+    document.getElementById("ans3").innerHTML = arr_3 +"<br><br>" + "PRODUCT OF ALL ELEMENT :- "
+    
+    let ans = arr_3.filter((el)=>{
+        return el
+    }).reduce((pr1,pr2)=>{
+        return +pr1 * +pr2
+    },1)
+    console.log(ans)
+    document.getElementById("ans3").innerHTML += ans
+
+    // task-4
+
+    let arr_4 = [1,2,3,4,5,6,7]
+
+    document.getElementById("ans4").innerHTML = arr_4 +"<br><br>" + "SUM OF ALL EVEN NUMBER :- "
+    
+    let even = arr_4.filter((el)=>{
+        return el%2 == 0
+    }).reduce((even1,even2)=>{
+        return even1 +even2
+    },0)
+    console.log(even)
+    document.getElementById("ans4").innerHTML += even
+
+    // task-5
+
+    let arr_5 = ['komal','bhakti','mansi','sarthi','naksh','om']
+
+    document.getElementById("ans5").innerHTML = arr_5 +"<br><br>" + "ELEMENT WHOSE LENGTH IS GREATER THAN 4 :- <br><br>"
+
+    let greater = arr_5.filter((el)=>{
+        return el.length > 4
+    }).map((el)=>{
+        return  el +"&nbsp;"+ el.length +"&nbsp;&nbsp;"
+    })
+    console.log(greater)
+    document.getElementById("ans5").innerHTML += greater
+
+    // task-6
+
+    let arr_6 = ['komal','bhakti','mansi','sarthi','naksh','om']
+
+    document.getElementById("ans6").innerHTML = arr_6 +"<br><br>" + "NAKSH IS IN GIVEN STRING OR NOT :- <br><br>"
+
+    console.log(arr_6.includes("naksh"))
+
+    document.getElementById("ans6").innerHTML += arr_6.includes("naksh")
+
+    // task-7
+
+    let arr_7 = [1,2,3,4,5,6,7]
+
+    document.getElementById("ans7").innerHTML = arr_7 +"<br><br>" + "SQUARE OF ALL EVEN NUMBER :- "
+    
+    let even__1 = arr_7.filter((el)=>{
+        return el%2 == 0
+    }).map((el)=>{
+        return el*el
+    })
+    console.log(even__1)
+    document.getElementById("ans7").innerHTML += even__1
+
+    // task-8
+
+    let arr_8 = ['apple','mango','litchie','kiwi','cherry','peer']
+
+    document.getElementById("ans8").innerHTML = arr_8 +"<br><br>" + "STRING LENGTH LESS THAN 5 CONVERT IN UPPERCASE :- <br><br>"
+
+    function  processArray(){
+        let result = arr_8.filter((el)=>{
+            return el.length<5
+        })
+        return result.toString().toUpperCase()
+    }
+    console.log(processArray(arr_8))
+
+    document.getElementById("ans8").innerHTML += processArray(arr_8)
+
+</script>
