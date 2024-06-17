@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object-1</title>
+</head>
+<style>
+    body{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+</style>
+<body>
+    <center>
+        <!-- task-1 -->
+        <h2>--------Person Key--------</h2>
+    </center>
+        <h3 id="ans1"></h3>
+
+    <center>   
+        <!-- task-2 -->
+        <h2>--------Car Value--------</h2>
+    </center>
+        <h3 id="ans2"></h3>
+
+    <center>   
+        <!-- task-3 -->
+        <h2>--------Change property --------</h2>
+    </center>
+        <h3 id="ans3"></h3>
+        <h3 id="ans4"></h3>
+
+    <center>   
+        <!-- task-4 -->
+        <h2>--------Delete Password --------</h2>
+    </center>
+        <h3 id="ans5"></h3>
+        <h3 id="ans6"></h3>
+
+    <center>   
+        <!-- task-5 -->
+        <h2>--------Edit Price --------</h2>
+    </center>
+        <h3 id="ans7"></h3>
+        <h3 id="ans8"></h3>
+
+    <center>   
+        <!-- task-6 -->
+        <h2>--------Create Method--------</h2>
+    </center>
+        <h3 id="ans9"></h3>
+
+</body>
+</html>
+
+<script>
+
+    // task-1
+
+    let person = {
+        name : "Komal Godhaniya",
+        course : "Full Stack Development",
+        age : 20,
+    }
+    
+    for(key1 in person){
+        document.getElementById("ans1").innerHTML += (key1 + " = " + person[key1] + "<br>")
+        console.log(key1 + " = " + person[key1])
+    }
+
+    // task-2
+
+    let car = {
+       carname : "Range Rover",
+       price : "₹ 2.39cr to ₹ 4.47cr" ,
+       average : "8.77 Kmpl to 13.16 Kmpl"
+    }
+
+    for(key2 in car){
+        document.getElementById("ans2").innerHTML += (key2 + " = " + car[key2] + "<br>")
+        console.log(key2 + " = " + car[key2])
+    }
+
+    // task-3
+
+    let book = {
+      name : "Moby-Dick",
+      price :  "₹ 150",
+      pages : "200"
+    }
+
+    document.getElementById("ans3").innerHTML += "Before Changing Pages :- <br><br>"
+
+    for(key3 in book){
+        document.getElementById("ans3").innerHTML += (key3 + " = " + book[key3] + "<br>")
+        console.log(key3 + " = " + book[key3])
+    }
+
+   book.pages = "300"
+   
+   let oldbookpage = book.pages;
+   book.pages = 300;
+
+   document.getElementById("ans4").innerHTML += "After Changing Pages :- <br><br>"
+
+   console.log(book.pages)
+   document.getElementById("ans4").innerHTML += book.pages
+
+    // task-4
+
+    let user = {
+      id : "komal godhaniya",
+      Password : 8318 ,
+      Email : "godhaniyakomal@gmail.com"
+    }
+
+    document.getElementById("ans5").innerHTML += "Before Delete Password :- <br><br>"
+
+    for(key4 in user){
+        document.getElementById("ans5").innerHTML += (key4 + " = " + user[key4] + "<br>")
+        console.log(key4 + " = " + user[key4])
+    }
+
+    delete user.Password
+
+    document.getElementById("ans6").innerHTML += "After Delete Password :- <br><br>"
+
+    for(key4 in user){
+        document.getElementById("ans6").innerHTML += (key4 + " = " + user[key4] + "<br>")
+        console.log(key4 + " = " + user[key4])
+    }
+
+    // task-5
+
+    let laptop = {
+      LaptopName : "HP Laptop",
+      LaptopMemory : "4GB",
+      ProcessorName : "Intel(R)"
+    }
+
+    document.getElementById("ans7").innerHTML += "Before Edit Price :- <br><br>"
+
+    for(key5 in laptop){
+        document.getElementById("ans7").innerHTML += (key5 + " = " + laptop[key5] + "<br>")
+        console.log(key5 + " = " + laptop[key5])
+    }
+
+    laptop.LaptopPrice = "₹ 1200"
+
+    document.getElementById("ans8").innerHTML += "After Edit Price :- <br><br>"
+
+    for(key5 in laptop){
+        document.getElementById("ans8").innerHTML += (key5 + " = " + laptop[key5] + "<br>")
+        console.log(key5 + " = " + laptop[key5])
+    }
+
+    // task-6
+
+    let student = {
+        StudentName : "Komal Godhaniya",
+        StudentAge : 20,
+        StudentCource : "Fullstack Development",
+    }
+
+    for(key6 in student){
+        document.getElementById("ans9").innerHTML += (key6 + " = " + student[key6] + "<br>")
+        console.log(key6 + " = " + student[key6])
+    }
+
+    student.greet = function(){
+        console.log("Have A Nice Day !!!")
+        document.getElementById("ans9").innerHTML += "Have A Nice Day !!!"
+    }
+    student.greet()
+
+</script>
