@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object-2</title>
+</head>
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    hr{
+        border: 1px dashed black;
+    }
+</style>
+<body>
+
+</body>
+</html>
+
+<script>
+
+    let student = [
+        {name: "mansi" , rollno : 18 , marks : 66},
+        {name: "komal" , rollno : 2 , marks : 50},
+        {name: "bhakti" , rollno : 16 , marks : 70},
+        {name: "harmi" , rollno : 4 , marks : 65},
+        {name: "aastha" , rollno : 15 , marks : 15}
+    ]
+
+    // task-1
+
+    for(let i=0; i<student.length; i++){
+        console.log(student[i].name.toUpperCase())
+    }
+
+    // task-2
+
+    let ans1 = student.filter((el)=>{
+        return el.marks > 60
+    })
+    console.log(ans1)
+
+    // task-3
+
+    let ans2 = student.filter((mk)=>{
+        return mk.marks > 60 && mk.rollno > 15
+    })
+    console.log(ans2)
+
+    // task-4
+
+    let ans3 = student.reduce((acc,curr)=>{
+        return acc + curr.marks
+    },0)
+    console.log(ans3)
+
+    // task-5
+
+    let ans4 = student.filter((el) => {
+        return el.marks > 60
+
+    }).map((el) => {
+        return el.name
+    })
+    console.log(ans4)
+
+    // task-6
+
+    let ans5 = student.map((el)=>{
+        return el.marks + 20  
+    })
+    console.log(ans5)
+
+    // task-7
+
+    let Categorize = [
+        { text: "chainshow man", author: "Tsugu", category: "education" },
+        { text: "jujutsu kaisen", author: "Gege Akutami", category: "anime" },
+        { text: "shinchan", author: "Yoshito Usui", category: "cartoon" },
+        { text: "death_note", author: "Tsugumi Ohba", category: "education" }
+    ]
+
+    let ans6 = Categorize.filter((el)=>{
+        return el.category === "education"
+    })
+    console.log(ans6)
+
+</script>
