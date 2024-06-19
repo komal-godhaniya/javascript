@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object-pr-3</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    // task-3
+
+    let book = [
+        { text: "Moby-Dick", autor : "Barbara Cartland", price : 50, quantityAvailable : 2 },
+        { text: "Don Quixote", author: "Arundhati Roy",price : 60 , quantityAvailable : 3 },
+        { text: "Beloved", author: "Ruskin Bond", price : 70 , quantityAvailable : 0 },
+        { text: "The Hobbit", author : "William Shakespeare",price : 45 , quantityAvailable : 1}
+    ]
+
+    let ans = book.filter((el)=>{
+        return el.price <= 60 && el.quantityAvailable > 0;
+    })
+    console.log(ans) 
+    
+
+</script>

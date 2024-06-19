@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object-pr-2</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    // task-2
+
+    let Categorize = [
+        { text: "We learn from failure, not from success!", autor : "Barbara Cartland", category: "education" },
+        { text: "Keep calm and carry a wand", author: "Arundhati Roy",category: "funny" },
+        { text: "Nothing is impossible", author: "Ruskin Bond", category: "inspiration" },
+        { text: "facts, but training the mind to think", author : "William Shakespeare", category: "education" }
+    ]
+
+    let ans = Categorize.filter((el)=>{
+        return el.category === "education"
+    })
+    console.log(ans) 
+    
+</script>

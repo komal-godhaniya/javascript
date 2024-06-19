@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object-pr-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    // task-1
+
+     let student = [
+        {name : "komal" , score : 75},
+        {name : "mansi" , score : 95},
+        {name : "bhakti" , score : 65},
+        {name : "aastha" , score : 92}
+    ]
+
+    // BY HOF
+
+    let ans1 = student.filter((el)=>{
+        return el.score > 90
+    }).map((el) => {
+        return el.name
+    })
+
+    // BY LOOP
+
+    //  for(let i=0; i<student.length;i++){
+    //     if(student[i].score>90){
+    //         console.log(student[i].name + " have high score .");
+    //     }
+    // }
+
+    console.log(ans1)
+
+
+
+</script>
