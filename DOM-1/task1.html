@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  button{
+    padding: 10px;
+    background-color: rgb(166, 79, 247);
+    border: none;
+    color: white;
+  }
+</style>
+<body>
+
+    <!-- task-1 -->
+
+    <h1 class="green blue red">RED</h1>
+    <button onclick="H1()">click here</button>
+
+    <!-- task-2 -->
+
+    <h3 class="green blue red">Hey !</h3>
+    <h3 class="green blue red">Good evening...</h3>
+    <h3 class="green blue red">Have a great day...!!</h3>
+   
+    <button onclick="green()">for green</button>
+
+    <!-- task-3 -->
+
+    <h5 class="green blue red">Hey !</h5>
+    <h5 class="green blue red">Good afternoon...</h5>
+    <h5 class="green blue red">Have a nice day...!!</h5>
+   
+    <button onclick="blue()">for blue</button>
+
+    <!-- task-4 -->
+
+    <br><br>
+    <button onclick="forallg()">click me to change all in green</button>
+
+    <!-- task-5 -->
+     
+    <br><br>
+    <button onclick="forallb()">click me to change all in blue</button>
+
+    <!-- task-6 -->
+     
+    <br><br>
+    <button onclick="forallr()">click me to change all in red</button>
+    
+</body>
+</html>
+
+<script>
+
+    // task-1
+
+    function H1(){
+        document.querySelector("h1").style.color = "red"
+    }
+
+    // task-2
+
+    function green() {
+        let heading = document.querySelectorAll("h3")
+        for(let i = 0 ; i<heading.length; i++){
+            heading[i].style.color = "green"
+        }
+    }
+
+    // task-3
+
+    function blue() {
+        let heading1 = document.querySelectorAll("h5")
+        for(let i = 0 ; i<heading1.length; i++){
+            heading1[i].style.color = "blue"
+        }
+    }
+
+    // task-4
+
+    function forallg() {
+        let first = document.querySelectorAll(".green")
+        for(let i = 0 ; i<first.length; i++){
+            first[i].style.color="green"
+        }
+    }
+
+    // task-5
+
+    function forallb() {
+        let second = document.querySelectorAll(".blue")
+        for(let i = 0 ; i<second.length; i++){
+            second[i].style.color="blue"
+        }
+    }
+
+    // task-5
+
+    function forallr() {
+        let third = document.querySelectorAll(".red")
+        for(let i = 0 ; i<third.length; i++){
+            third[i].style.color="red"
+        }
+    }
+
+</script>

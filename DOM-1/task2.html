@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html>
+ <head>
+  
+ <title>Content Manipulation</title>
+ </head> 
+ <style>
+  body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  button{
+    padding: 10px;
+    background-color: rgb(166, 79, 247);
+    border: none;
+    color: white;
+  }
+ </style>
+<body>
+ 
+  <h1 id="firstname">Your FirstName</h1>
+   
+<div id="lastname">
+
+Your LastName  </div>
+  
+ <p id="fullname">Your First&LastName</p>
+ 
+  <hr/>
+   
+<button onclick="setFirstName()">FIRSTNAME</button>
+
+    <button onclick="setLastName()">LASTNAME</button>
+ 
+  <button onclick="setFullName()">FIRSTNAME NAME</button> 
+
+    <button onclick="resetDefaults()">RESET DEFAULTS</button>
+ 
+ </body>
+ </html>
+ 
+ <script type="text/javascript">
+ 
+  function setFirstName() {
+   document.querySelector("#firstname").textContent = "Komal"
+   document.querySelector("#firstname").style.color = "orange"
+
+  }
+
+    function setLastName() {
+      document.querySelector("#lastname").textContent = "Godhaniya"
+      document.querySelector("#lastname").style.color = "red"
+
+    }
+
+  function setFullName() {
+    let firstname = document.querySelector("#firstname").textContent
+    let lastname = document.querySelector("#lastname").textContent
+
+    document.querySelector("#fullname").textContent = firstname + " " + lastname 
+    document.querySelector("#fullname").style.color = "green"
+ 
+   }
+
+  function resetDefaults(){
+    
+    document.querySelector("#firstname").textContent =""
+    document.querySelector("#lastname").textContent =""
+    document.querySelector("#fullname").textContent =""
+
+   }
+ 
+  </script>
