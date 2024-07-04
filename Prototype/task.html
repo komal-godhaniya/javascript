@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+<style>
+    body{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    hr{
+        border: 1px dashed black;
+    }
+</style>
+<body>
+    <center>
+
+        <!-- task-1 -->
+
+        <h1>By Map Function</h1>
+        <h2 id="ans1"></h2>
+
+        <hr>
+
+        <!-- task-2 -->
+
+        <h1>By Filter Function</h1>
+        <h2 id="ans2"></h2>
+
+        <hr>
+
+    </center>
+</body>
+</html>
+
+<script>
+
+    // task-1
+
+    let arr = [1 , 2 , 3 , 4 , 5]
+
+    Array.prototype.komal = function(el){
+        let newArr = []
+        for(let i = 0 ; i<this.length ; i++){
+            newArr.push(el(this[i]))
+        }
+        return newArr
+    }
+
+    let ans1 = arr.komal((el)=>{
+        return el*2
+    })
+
+    console.log(ans1)
+    document.getElementById("ans1").innerHTML = ans1
+
+    // task-2
+
+    let arr1 = [1 , 2 , 3 , 4 , 5]
+
+    Array.prototype.even = function(el1){
+        let evenArr = []
+
+        for(let i = 0 ; i<this.length ; i++){
+
+            if(el1(this[i])){
+                evenArr.push((this[i]))
+            }
+        }
+        return evenArr
+    }
+
+    let ans2 = arr1.even((el1)=>{
+        return el1 % 2 == 0
+    })
+
+    console.log(ans2)
+    document.getElementById("ans2").innerHTML = ans2
+
+</script>
