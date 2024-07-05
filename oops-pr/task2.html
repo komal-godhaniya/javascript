@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-2</title>
+</head>
+<style>
+    body{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    <center>
+        <h2>----------------automobile [electricVehicle]----------------</h2>
+    </center>
+
+    <h2>
+        Enter Vehical Name :- 
+        <input type="text" id="name">
+    </h2>
+    <h2>
+        Enter Vehical Price :- 
+        <input type="text" id="price">
+    </h2>
+    <h2>
+        Enter Vehical Color :- 
+        <input type="text" id="color">
+    </h2>
+    
+    <h1 id="vehical_ans"></h1>
+</body>
+</html>
+
+<script>
+    
+    // task-2
+
+    let v_name = document.getElementById("name").value
+    let v_price = document.getElementById("price").value
+    let v_color = document.getElementById("color").value
+
+    class vehical{
+        constructor(v_name,v_price,v_color){
+            this.v_name = v_name
+            this.v_price = v_price
+            this.v_color = v_color
+        }
+    }
+    class electricalvehical extends vehical{
+        name(){
+            document.getElementById("vehical_ans").innerHTML += "vehical name :- " + this.v_name +"<br>"
+            console.log(this.v_name)
+        }
+        price(){
+            document.getElementById("vehical_ans").innerHTML += "vehical price :- " + this.v_price +"<br>"
+            console.log(this.v_price)
+        }
+        color(){
+            document.getElementById("vehical_ans").innerHTML += "vehical color :- " + this.v_color
+            console.log(this.v_color)
+        }
+    }
+
+    let vehical_obj = new electricalvehical(v_name,v_price,v_color)
+
+    vehical_obj.name()
+    vehical_obj.price()
+    vehical_obj.color()
+
+
+
+
+</script>
