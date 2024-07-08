@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>birthday</title>
+</head>
+<style>
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95vh;
+    }
+    h1{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 200px;
+    }
+    img{
+        display: none;
+    }
+</style>
+<body>
+    <div>
+        <h1></h1>
+        
+        <img src="https://www.funimada.com/assets/images/cards/big/bday-452.gif" alt="">
+    </div>
+</body>
+</html>
+
+<script>
+    let index = 10
+    let stop = setInterval(()=>{
+        index--
+        document.querySelector("h1").innerHTML = index
+        if(index === 0){
+            clearInterval(stop)
+            document.querySelector("img").style.display = "block"
+            document.querySelector("h1").style.display = "none"
+
+        }
+    },1000)
+</script>

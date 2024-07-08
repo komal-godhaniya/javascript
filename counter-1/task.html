@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COUNTER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container-fluid{
+        margin-top: 17%;
+    }
+    .container-fluid,
+    .row,
+    .col{
+        height: 200px;
+        border: 1px solid transparent;
+    }
+    .col{
+        width: 20%;
+        background-color: rgb(2,57,90);
+    }
+  </style>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col col-2 d-flex justify-content-center align-items-center flex-column">
+                <i class="fa-regular fa-user text-white fs-2"></i>
+                <h2 id="count_1" class="text-white mt-2"></h2>
+                <h6 class="text-white">Students Trained</h6>
+            </div>
+            <div class="col col-2 d-flex justify-content-center align-items-center flex-column">
+                <i class="fa-regular fa-building text-white fs-2"></i>
+                <h2 id="count_2" class="text-white mt-2"></h2>
+                <h6 class="text-white mt-2">Branches</h6>
+            </div>
+            <div class="col col-2 d-flex justify-content-center align-items-center flex-column">
+                <i class="fa-regular fa-address-card text-white fs-2"></i>
+                <h2 id="count_3" class="text-white mt-2"></h2>
+                <h6 class="text-white mt-2">Certification</h6>
+            </div>
+            <div class="col col-2 d-flex justify-content-center align-items-center flex-column">
+                <i class="fa-regular fa-user text-white fs-2"></i>
+                <h2 id="count_4" class="text-white mt-2"></h2>
+                <h6 class="text-white mt-2">Approved Course</h6>
+            </div>
+            <div class="col col-2 d-flex justify-content-center align-items-center flex-column">
+                <i class="fa-regular fa-user text-white fs-2"></i>
+                <h2 id="count_5" class="text-white mt-2"></h2>
+                <h6 class="text-white mt-2">Companies Tie-Ups</h6>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
+<script>
+    let student = 0
+    let start_1 = setInterval(()=>{
+        student++
+        document.querySelector("#count_1").innerHTML = student
+        if(student === 37500){
+            clearInterval(start_1)
+            document.getElementById("count_1").innerHTML += "+"
+        }
+    },1)
+
+    let branch = 0
+    let start_2 = setInterval(()=>{
+        branch++
+        document.querySelector("#count_2").innerHTML = branch
+        if(branch === 22){
+            clearInterval(start_2)
+            document.getElementById("count_2").innerHTML += "+"
+        }
+    },100)
+
+    
+    let certificate = 0
+    let start_3 = setInterval(()=>{
+        certificate++
+        document.querySelector("#count_3").innerHTML = certificate
+        if(certificate === 8){
+            clearInterval(start_3)
+            document.getElementById("count_3").innerHTML += "+"
+        }
+    },100)
+
+    let course = 0
+    let start_4 = setInterval(()=>{
+        course++
+        document.querySelector("#count_4").innerHTML = course
+        if(course === 50){
+            clearInterval(start_4)
+            document.getElementById("count_4").innerHTML += "+"
+        }
+    },100)
+
+    let ups = 0
+    let start_5 = setInterval(()=>{
+        ups++
+        document.querySelector("#count_5").innerHTML = ups
+        if(ups === 1500){
+            clearInterval(start_5)
+            document.getElementById("count_5").innerHTML += "+"
+        }
+    },1)
+</script>
