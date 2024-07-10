@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countdown-slider</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+
+    }
+    body{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #main{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: black;
+
+    }
+    h1{
+        font-size: 100px;
+        animation: scale1 1s infinite;
+        transition: all .9s ease-in-out;
+        color: white;
+    }
+    @keyframes scale1 {
+    0% {transform: scale(3);
+     }
+    50% {transform: scale(.7);
+     }
+    100% {transform: scale(0.8);
+    }
+    }
+    #slider{
+        /* background-color: aquamarine; */
+        height: 100vh;
+        display: none;
+        width: 100%;
+    }
+    img{
+        height: 80%;
+        width: 80%;
+        margin-top: 5%;
+        margin-left: 10%;
+    }
+
+</style>
+<body>
+    <div id="main">
+        <audio id="audio1" controls autoplay  style="display: none;">
+            <source src="counting.mp3" type="audio/mpeg">
+        </audio>
+        <h1></h1>
+        <div id="slider">
+            <audio id="audio2"   style="display: none;">
+                <source src="jingle-bell.mp3" type="audio/mpeg" >
+            </audio>
+            <img src="https://cdn.pixabay.com/photo/2019/12/19/03/24/christmas-4705310_1280.jpg" alt="">
+
+            <img src="https://cdn.pixabay.com/photo/2021/12/24/15/20/christmas-tree-6891312_960_720.jpg" alt="">
+
+            <img src="https://cdn.pixabay.com/photo/2022/01/11/21/59/christmas-6931584_1280.jpg" alt="">
+
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    let index = 11
+    let stop = setInterval(()=>{
+        index--
+        document.querySelector("h1").innerHTML=index
+
+        if(index === 0){
+            clearInterval(stop)
+            document.querySelector("#slider").style.display="block"
+
+
+            document.querySelector("h1").style.display="none"
+
+        }
+    },1100)
+
+    let pic = document.querySelectorAll("img")
+    let time = 0
+
+    function slides (time){
+        for(let i=0; i<pic.length;i++){
+            pic[i].style.display="none"
+        }
+        pic[time].style.display="block"
+    }
+    
+    function show(){
+        setInterval(()=>{
+            slides(time)
+            time++
+
+            if(time === pic.length){
+                time = 0
+            }
+        },1000)
+    }
+    show()
+
+    var audio1 = document.getElementById('audio1');
+    var audio2 = document.getElementById('audio2');
+
+
+        audio1.addEventListener('ended',function(){
+            audio1.style.display = 'none';
+
+            audio2.style.display = 'block';
+            audio2.play();
+
+        })
+
+    // var audio = document.getElementById("audio")
+
+    // function playaudio(){
+    //     audio.play();
+    // }
+
+    // function pauseaudio(sec){
+    //     audio.pause();
+
+    //     setTimeout(function(){
+    //         audio.play();
+    //     },sec*1000);
+    // }
+
+</script>
