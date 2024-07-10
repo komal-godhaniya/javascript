@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countdown-slider</title>
+</head>
+<style>
+    body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #main {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: black;
+    }
+    h1 {
+        font-size: 100px;
+        animation: scale1 1s infinite;
+        transition: all .9s ease-in-out;
+        color: white;
+    }
+    @keyframes scale1 {
+        0% { transform: scale(3); }
+        50% { transform: scale(.7); }
+        100% { transform: scale(0.8); }
+    }
+    #slider {
+        background-color: aquamarine;
+        height: 100vh;
+        display: none;
+        width: 100%;
+    }
+    #slider-audio{
+        display: none;
+    }
+</style>
+<body>
+    <div id="main">
+        <audio id="countdown-audio" controls autoplay style="display: none;">
+            <source src="counting.mp3" type="audio/mpeg">
+        </audio>
+        <h1></h1>
+        <div id="slider">
+        </div>
+    </div>
+
+    <script>
+        let index = 11;
+        let countdownAudio = document.getElementById("countdown-audio");
+        let sliderAudio = document.getElementById("slider-audio");
+
+        let stop = setInterval(() => {
+            index--;
+            document.querySelector("h1").innerHTML = index;
+
+            if (index === 0) {
+                clearInterval(stop);
+                document.querySelector("#slider").style.display = "block";
+                document.querySelector("h1").style.display = "none";
+
+                // Stop the countdown audio before starting the slider audio
+                countdownAudio.pause();
+                countdownAudio.currentTime = 0;
+                sliderAudio.play();
+            }
+        }, 1100);
+    </script>
+</body>
+</html>
