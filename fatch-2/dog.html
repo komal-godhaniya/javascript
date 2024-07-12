@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakestore</title>
+</head>
+<style>
+
+</style>
+<style>
+
+    #main{
+       width: 50%;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    }
+
+</style>
+<body>
+        <div id="main"></div>
+</body>
+</html>
+
+<script>
+    fetch('https://dog.ceo/api/breeds/image/random')
+    .then((rec)=>{
+        return rec.json()
+    }).then((json)=>{
+        console.log(json)
+        displayData(json)
+    }).catch((err)=>{
+        console.log(err)
+    })
+
+    function displayData(json){
+        let box = document.createElement("div")
+        let pic = document.createElement("img")
+
+        pic.setAttribute("src",json.message)
+
+        box.append(pic)
+        document.getElementById("main").append(box)
+    }
+
+</script>
