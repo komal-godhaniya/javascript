@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json-pr</title>
+</head>
+
+<style>
+    body{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .img-size{
+        height: 250px;
+        margin-top: 50px;
+        display: block;
+    }
+    #display{
+        height: auto;
+        width: 35%;
+        border: 1px solid transparent;
+    }
+    input{
+        height: 30px;
+        width: 20%;
+        background: transparent;
+        border: 1px dashed black;
+        padding-left: 15px;
+    }
+    button{
+        height: 35px;
+        width: 80px;
+        background-color: rgb(110, 55, 0);
+        border: 1px dashed white;
+        /* border: none; */
+        color: white;
+    }
+    span{
+        color: red;
+    }
+</style>
+
+<body>
+    <center>
+        <h1 style="color: rgb(110, 55, 0);">-----------Fakestore Api-----------</h1>
+
+        <h3 style="color: peru;">Enter Any Id (1 to 20) :- </h3>
+        <input type="text" id="user_id">
+        <button id="data_btn">Display</button> 
+        <div id="display"></div>
+    </center>
+</body>
+</html>
+
+<script src="pr.js"></script>
+
+<script>
+    document.getElementById("data_btn").addEventListener("click" , function()
+    {
+        let user_id = document.getElementById("user_id").value
+        let display = document.getElementById("display")
+        display.innerHTML = ""
+
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i].id == user_id){
+
+                let img = document.createElement("img")
+                img.setAttribute("class" , "img-size")
+                img.src = arr[i].image
+
+                let category = document.createElement("h2")
+                category.style.color = "green"
+                category.innerHTML += "<span>CATEGORY :- </span>   " + arr[i].category
+
+                let price = document.createElement("h2")
+                price.style.color = "green"
+                price.innerHTML += "<span>PRICE :- </span>  $" + arr[i].price
+                
+                let rate = document.createElement("h2")
+                rate.style.color = "green"
+                rate.innerHTML += "<span>RATE :- </span>" + arr[i].rating.rate
+
+                let input = document.createElement("input") 
+                input.placeholder= "Change rate !"
+                input.style.width = "50%"
+                input.style.marginInlineStart = "10px"
+                input.style.display = "none"
+
+                let update = document.createElement("button")
+                update.innerText = "update"
+                update.style.marginInlineStart = "10px"
+                update.style.display = "none"
+
+
+                let edit_btn = document.createElement("button")
+                edit_btn.innerText = "Edit"
+
+                edit_btn.addEventListener("click" , () =>{
+                    input.style.display = "inline"
+                    update.style.display = "inline"
+                })
+
+                update.addEventListener("click" , () =>{
+                    rate.innerHTML = input.value
+                    input.style.display = "none"
+                    update.style.display = "none"
+                })
+
+                display.append(img , category , price , rate , edit_btn , input , update)
+                break;
+            }
+           
+        }
+    })
+
+
+</script>
