@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>corona-data</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        color: rgb(139,53,82);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #section{
+        height: 100vh;
+        background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3),rgba(0,0,0,0.3)) , url(vector.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    main{
+        margin-left: 10%;
+        /* border: 1px solid; */
+        width: 30%;
+    }
+    h2{
+        font-size: 30px;
+    }
+    input{
+        height: 30px;
+        width: 50%;
+        border-radius: 8px;
+        border: transparent;
+        padding-left: 15px;
+    }
+    button{
+        height: 30px;
+        width: 100px;
+        border-radius: 8px;
+        border: transparent;
+        font-size: 15px;
+    }
+</style>
+<body>
+
+    <div id="section">
+        <main>
+            <center>
+                <br><br><br><br><br><br><br><br><br><br><br>
+                <h2>Enter Any City :- </h2>
+                <br>
+                <input type="text" id="nation">
+                <button id="submit">Submit</button>
+                <br>
+                <div id="data"></div>
+        </center>
+        </main>
+    </div>
+</body>
+</html>
+
+<script src="api.js"></script>
