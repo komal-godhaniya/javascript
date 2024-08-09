@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8)) , url("img\ \(20\).jpg");
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    flex-direction: column;
+    animation: slider 15s infinite linear;
+}
+@keyframes slider{
+    25%{
+        background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8)) , url("https://preview.codeless.co/picante/default/wp-content/uploads/2018/07/slide3-compressed.jpg");
+        background-size: 100% 100%;
+        overflow: hidden;
+        background-repeat: no-repeat;
+    }
+    50%{
+        background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8)) , url("img\ \(1\).jpg");
+    }
+    75%{
+        background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8)) , url("https://preview.codeless.co/picante/default/wp-content/uploads/2018/07/slide2-compressed.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    100%{
+        background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8)) , url("img\ \(20\).jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+}
+#meal , #flavorInput{
+    height: 40px;
+    width: 200px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 1%;
+    padding-left: 2%;
+    border: 2px solid #355E3B;
+    color: #355E3B;
+    background-color: whitesmoke;
+}
+h1{
+    color: #2E8B57;
+}
+#submit , #updateBtn{
+    height: 40px;
+    width: 50px;
+    border-top-right-radius: 20px;
+    border: 2px solid #355E3B;
+    color: #355E3B;
+    cursor: pointer;
+    border-bottom-right-radius: 20px;
+}
+.m-color{
+    color: #4F7942;
+    font-size: 20px;
+}
+.video{
+    height: 35px;
+    width: 120px;
+    font-weight: 600;
+    font-size: 13px;
+    background-color: #4F7942;
+    color: white;
+    border-radius: 8px;
+    margin-top: 15px;
+    display: block;
+    letter-spacing: 1px;
+    border: 2px solid #4F7942;
+    cursor: pointer;
+}
+.edit{
+    height: 35px;
+    width: 70px;
+    font-weight: 600;
+    font-size: 13px;
+    background-color: #4F7942;
+    color: white;
+    margin-top: 15px;
+    display: block;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    border: 2px solid #4F7942;
+    cursor: pointer;
+}
+#flavorInput{
+    margin-top: 10px;
+    padding-left: 15px;
+}
+#updateBtn{
+    margin-left: 10px;
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+

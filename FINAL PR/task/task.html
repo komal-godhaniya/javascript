@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK MANAGE</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <center>
+        <h1>Task Manage</h1>
+    </center>
+    <div id="main">
+        <div id="sec-1">
+            <center>
+            <form action="" id="task_form">
+                <h2>
+                    <label for="">Enter Task :- </label>
+                    <input type="text" id="task" placeholder="Task">
+                </h2>
+                <h2>
+                    <label for="">Priority :- </label>
+                    <select id="priority">
+                        <option value="pr">Priority</option>
+                        <option value="High">High</option>
+                        <option value="Meduim">Meduim</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </h2>
+                <h2>
+                    <label for=""> Course Duration :- </label>
+                    <input type="number" id="duration"> 
+                </h2>
+                <h2>
+                    <button type="button" id="submit">Submit</button>
+                    <button type="button" id="update">Update</button>
+                </h2> 
+                </form>
+        </center>
+        </div>
+        <div class="table" id="sec-1">
+            <table>
+                <thead>
+                  <tr>
+                    <th>Task</th>
+                    <th>Priority</th>
+                    <th>Duration</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script src="task.js"></script>
