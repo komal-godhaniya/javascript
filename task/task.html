@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+<body>
+</body>
+</html>
+
+<script>
+
+    // push
+
+    let arr1 = ["Komal" , "Mansi" , "Aastha"]
+    arr1.push("Bhakti" , "Harmi")
+
+    console.log(arr1)
+
+    // pop
+
+    let arr2 = ["komal" , "Meera" , "Naksh"]
+    arr2.pop()
+
+    console.log(arr2)
+
+    // slice
+
+    let a = [1 , 2 , 3 , 4 , 5]
+    let ans_slice = a.slice(1 , 3)
+    console.log(ans_slice)
+
+    // splice
+
+    let numArr = [10, 20, 30, 40]
+    numArr.splice(1, 3)
+
+    numArr.splice(1, 0, 3, 4, 5)
+
+    console.log(numArr)
+
+    let strArr = ["amit", "sumit", "anil"]
+
+    strArr.splice(1, 2, "Geeks", "Geeks1", "Geeks2")
+
+    // shift
+
+    let arr4 = [20, 30, 40, 50]
+
+    arr4.shift()
+
+    console.log(arr4)
+
+    // ushift
+
+    let arr5 = ["komal", "naksh"]
+
+    arr5.unshift("aarya", "aarvi")
+    console.log(arr5)
+
+    // map
+        
+    let arr7 = [4, 9, 16, 25]
+
+    let ans = arr7.map(task1)
+
+    function task1(){
+        return arr7.map(Math.sqrt)
+    }
+
+    console.log(ans)
+
+    // filter
+
+    let ages = [20, 30, 16, 40]
+    let result = ages.filter(check)
+
+    function check(age) {
+    return age >= 18
+    }
+    console.log(result)
+
+    // reduse
+
+    let arr6 = [88, 50, 25, 10]
+
+    let sub = arr6.reduce(task)
+
+    function task(total, num) {
+        return total - num
+    }
+
+    console.log(sub)
+
+    // sort
+
+    let fruits = ["Cherry", "Orange", "Apple", "Mango"]
+
+    let fruit_ans = fruits.sort()
+
+    console.log(fruit_ans)
+
+    // reverse
+
+    let arr8 = [1, 2, 3, 4, 5]
+    arr8.reverse()
+    console.log(arr8)
+
+
+
+</script>
